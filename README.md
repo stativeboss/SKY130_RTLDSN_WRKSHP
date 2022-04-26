@@ -79,7 +79,7 @@ This is an introductoy video to the labs. It explains about the tool flow and th
 4. Check for the standard SKY130 library using the following sequence of commands:
 ![image](https://user-images.githubusercontent.com/14873110/165395883-fe31485b-f5d9-45cd-b67a-a4dc2403516a.png)
 
-5. Come back to the sky130RTLDesignAndSynthesisWorkshop directory (note: use _cd .._ to come back one step out of the present directory), and get into verilog_files folder (note: use _cd foldername_ to enter into that folder directory). Now use the _ls_ command to view all the verilog source files and testbench files required for the workshop labs. A screenshot is provided for reference:
+5. Come back to the sky130RTLDesignAndSynthesisWorkshop directory (note: use _cd .._ to come back one step out of the present directory), and get into verilog_files folder (note: use _cd foldername_ to enter into the foldername directory). Now use the _ls_ command to view all the verilog source files and testbench files required for the workshop labs. A screenshot is provided for reference:
 ![image](https://user-images.githubusercontent.com/14873110/165397441-75c6ab8e-e978-4495-b0e2-c7420b0d39b3.png)
 
 
