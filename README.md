@@ -9,7 +9,7 @@ A good RTL design engineer is expected to understand which code (or code style) 
 
 The workshop uses SkyWater OpenSource Process Design Kit (or PDK in short). SkyWater PDK (https://github.com/google/skywater-pdk) is a Free and Open Source Silicon(or FOSS in short) PDK that is an output of the collaboration between Google and SkyWater Technology. It targets the SKY130 process node (180nm- 130nm hybrid technology). 
 
-This repo aims to make a record of the labs performed while briefing on what is covered in each video of the worshop. Each header in the table of contents below indicates a superficial heading which would comprise of either one or a few video's gist.
+This repo aims to make a record of the labs performed while briefing on what is covered in each video of the worshop. Each header in the table of contents below indicates a superficial heading which would comprise of either one or a few video's gist. The final topic covers my findings while doing the assessments.
 
 
 ## Table of Contents
@@ -32,6 +32,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Labs on Incomplete Overlapping If case](#labs-on-incomplete-overlapping-if-case)
 - [For loop and For generate](#for-loop-and-for-generate)
 - [Labs on For loop and For generate](#labs-on-for-loop-and-for-generate)
+- [Assesments](#assessments)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Introduction to open-source Verilog simulator iverilog
@@ -139,12 +140,34 @@ The following window then opens:
 The following is the TB (design code is completely seen in the above pic. Note that the design follows _behavioural_ style):
    ![image](https://user-images.githubusercontent.com/14873110/165473396-81221336-2939-4f5d-b8de-5c43b5203749.png)
 
-Note:
+ Note:
    ![image](https://user-images.githubusercontent.com/14873110/165477253-3342cc0f-7ff9-420e-b3d8-d6e73387f8ea.png)
-More notes:
+ More notes:
    ![image](https://user-images.githubusercontent.com/14873110/165479227-966a8e9d-3c24-441b-8aa0-737d30150ae1.png)
+ 
 -------------------
 ## Introduction to Yosys and Logic Synthesis
+
+Firstly, if iVerilog can perform both simulation and synthesis (below pic taken from iverilog website http://iverilog.icarus.com/), why use Yosys?
+   ![image](https://user-images.githubusercontent.com/14873110/165511483-0729576f-8bb0-4af0-8af9-654aef298763.png)
+
+A co-workshopian(is this word even there?) asked same question and the TA replied:
+
+   ![image](https://user-images.githubusercontent.com/14873110/165511840-f2647522-f8a3-4fb9-9731-4e6034c58720.png)
+   
+This section also have three videos.
+
+**Video-1:**
+In this video it is explained as to how we go about synthesizing the _good_mux_ design using Yosys.<br />
+
+- We first invoke yosys using the command
+```
+yosys
+```
+
+
+
+
 
 
 
