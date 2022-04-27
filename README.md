@@ -1,6 +1,6 @@
 # SKY130_RTLDSN_WRKSHP
 ![image](https://user-images.githubusercontent.com/14873110/165369130-3d7d0459-3793-4838-ba00-81f3ecd547ba.png)
-### Course Overview :
+## Course Overview :
 A good RTL design engineer is expected to understand which code (or code style) is synthesizeable and which is not. This five-day workshop by VSD (https://www.vlsisystemdesign.com/) gives an insight into this aspect through theory and labs. It briefly explains the following steps of chip design:
 1. Digital design. 
 2. Validate the design through functional simualations and writing testbenches. 
@@ -83,7 +83,41 @@ This is an introductoy video to the labs. It explains about the tool flow and th
 ![image](https://user-images.githubusercontent.com/14873110/165397441-75c6ab8e-e978-4495-b0e2-c7420b0d39b3.png)
 
 
-**Video-1:**<br /> 
+**Video-2:**<br /> 
+This is part-1 of the actual lab videos. It talks on how to use iverilog and gtkwave. A 2x1 MUX is implemented (loaded).
+
+1. A verilog file called good_mux.v(from the _verilog_files_ directory) is called along with its TB file tb_good_mux.v. The command used for this purpose is _iverilog    good_mux.v tb_good_mux.v_. A screenshot from the terminal is attached for reference:
+   ![image](https://user-images.githubusercontent.com/14873110/165417277-2b312fbe-6985-4ce9-a4e7-9377daaf1ee4.png)
+
+2. Once the above command is run, a new file called _a.out_ appears in the _verilog_files_ directory (refer below screenshot):
+   ![image](https://user-images.githubusercontent.com/14873110/165418179-6f06f414-419f-4001-8771-9ae562f6b5ff.png)
+
+3. The command _./a.out_ is used to execute this a.out file. This is going to create a dumpfile (refer below screenshot):
+   ![image](https://user-images.githubusercontent.com/14873110/165418395-860b6131-0c13-4d4e-b3c2-12a8cb13f31f.png)
+
+4. This VCD file is then run using gtkwave command as shown below:
+   ![image](https://user-images.githubusercontent.com/14873110/165419523-5074d249-ead3-428b-bd5b-1d41a2805d77.png)
+
+5. After the above step, a new window pops-up (GTKWave Analyzer). It is shown below:
+   ![image](https://user-images.githubusercontent.com/14873110/165420862-323323ec-4e3c-403d-b6c6-8c463301c541.png)
+
+6. If we observe the timescale in the above pic, each time step is 1ps (1ps = 10^-12s), but the simulation time is 300000ps (refer step4 pic last line). Because of      this, we can't observe the whole waveform until we zoom out. For this, click on this button (shown below):
+   ![image](https://user-images.githubusercontent.com/14873110/165422388-6875ae9e-4859-4ccd-b880-4746e5c49c98.png)
+   Then the waveforms should appear as shown:
+   ![image](https://user-images.githubusercontent.com/14873110/165422433-a9d1c263-5b57-4622-ab1d-334aba2a2709.png)
+
+   Check out the below figure to know what various other buttons do:
+   ![image](https://user-images.githubusercontent.com/14873110/165422999-3337205b-80d4-4954-a5fa-8852afe03e13.png)
+  
+**Video-3:**<br />
+This is part-2 of the actual lab videos. 
+   
+
+
+ 
+
+
+
 
   
 
