@@ -350,7 +350,7 @@ After PnR, whichever footprint class needs to be assigned (as per layout specs) 
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Hierarchial vs Flat Synthesis
+## Heirarchial vs Flat Synthesis
 
 
 
