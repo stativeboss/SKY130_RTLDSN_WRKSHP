@@ -160,10 +160,31 @@ This section also have three videos.
 **Video-1:**
 In this video it is explained as to how we go about synthesizing the _good_mux_ design using Yosys.<br />
 
-- We first invoke yosys using the command
-```
-yosys
-```
+Actually.... the right video sequence for this heading is video2 -> video3 -> video1. So I'll doucment in this sequence:
+
+**Video-2**
+This video explains what logic synthesis is and how we go about synthesizing logic.<br />
+
+_Question_: What is RTL Design?
+_Answer_: It is the behavioural representation of the given specification.<br />
+
+So, we have a code (RTL) and we want physical implementation of it (Using NAND Gates etc.,). This mapping is done by _Synthesis_. <br />
+
+Design(input)                 -> Decide which gates to use -> Make connections between these gates -> Create a Netlist based on these connections (output) <br />
+and Frontend Library (input) <br />
+
+
+_Question_: What is a library file (extension .lib)?
+_Answer_: It is a 'bucket' of logical gates. It'll have different variations of a same gate (slow, medium, fast, 2 input, 3 input etc.,).
+
+_Question_: Why do we need different flavours of gates?
+_Answer_: To meet the timing requirements (primarily... power and area are other creteria).
+
+**Note** : Faster gates provide good processing power but would be more wide and hence occupy more space. They might also lead to hold-time violations.<br />
+ Just a quick recap: Hold-time is the time required for the signal to stay stable by the time clock arrives. (I'm the signal waiting at rly station for the clock train). The guidance offered to the Synthesizer regarding hold-time and set-up time violations is called 'Constraints'. <br />
+ 
+ 
+ 
 
 
 
