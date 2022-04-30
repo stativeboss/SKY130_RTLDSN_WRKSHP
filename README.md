@@ -256,11 +256,35 @@ Small bit of all that data is snapped and put below. It shows the final result:
 
 ![image](https://user-images.githubusercontent.com/14873110/166120712-ba54541d-a837-4699-bc3b-e2e2f17c6718.png)
 
-5. Use ```abc -liberty``. Here, we need to specify the directory and be wary of the double underscore before 'tt' sky130_fd_sc_hd__tt025C_1v80.lib.
+5. Use ```abc -liberty```. Here, we need to specify the directory and be wary of the double underscore before 'tt' sky130_fd_sc_hd__tt025C_1v80.lib.
 
 ![image](https://user-images.githubusercontent.com/14873110/166121434-406d1bdd-8a10-4614-a14d-544307cf3728.png)
 
- **Note**:
+ **Note**: This command basically converts RTL into gates and decides what gates it has to link to. Here too explore the data. Result snippet below:
+ 
+ ![image](https://user-images.githubusercontent.com/14873110/166121487-93289625-1ef8-4e4c-86a5-c15c0d96b15b.png)
+
+_What happens if we execute the above command without specifying a particular library (in our case sky130)?_ <br />
+_The ABC loads it's in-built library and executes the command_. (courtesy: Sam Kambadur)
+
+6. Use ```show``` command to see the graphical version of logic it has synthesized.
+
+![image](https://user-images.githubusercontent.com/14873110/166121557-93ba836b-0ed3-4284-9f07-266dfe810c22.png)
+
+**Note**: The instructor's graphical version (shown below) is different from the one in mine. Probably the library got updated with a mux_cell.
+
+![image](https://user-images.githubusercontent.com/14873110/166121795-47417de8-62ef-4428-80ec-b3b7fdb35ed3.png)
+
+
+**Video-2**
+
+The instructor makes sense of the graphical version that he got.
+
+![image](https://user-images.githubusercontent.com/14873110/166121874-51fef153-30af-4ac8-bcfc-0f66c6b9ef31.png)
+
+
+
+
 
 
 
