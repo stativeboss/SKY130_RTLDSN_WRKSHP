@@ -18,7 +18,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Labs using iverilog and gtkwave](#labs-using-iverilog-and-gtkwave)
 - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
 - [Labs using Yosys and SKY130 PDKs](#labs-using-yosys-and-sky130-pdks)
-- [Introduction to timing.libs](#introduction-to-timing.libs)
+- [Introduction to timing.libs](#introduction-to-timing-libs)
 - [Heirarchial vs Flat Synthesis](#heirarchial-vs-flat-synthesis)
 - [Various flop coding styles and Optimisation](#various-flop-coding-styles-and-optimisation)
 - [Introduction to optimisations](#introduction-to-optimisation)
@@ -303,7 +303,65 @@ The instructor makes sense of the graphical version that he got.
 ![image](https://user-images.githubusercontent.com/14873110/166122812-ca7da7e6-cca6-461d-b434-c22a35759362.png)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
-## Introduction to timing.libs
+## Introduction to timing libs
+
+This section has three videos
+
+**Video-1**
+
+This video covers what exactly .lib file contains. <br />
+Use ```gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib``` to open the .lib file.<br />
+
+PVT: Process, Votage, Temperature -> These are very critical in working of a design.
+
+```
+tt: Typical (as in slow, fast, typical)
+025C: Temperature
+```
+
+**Video-2**
+
+![image](https://user-images.githubusercontent.com/14873110/166125412-972120cf-fd33-4608-9e82-ae9d17eb237f.png)
+
+From the highlighted line onwards, as we go down we can observe various parameters mentioned.
+
+Also, the as discussed earlier, the .lib file contains information about variations of a same cell type. That can be observed below (a311o_2 and a311o_4 for example):
+
+![image](https://user-images.githubusercontent.com/14873110/166125475-8be04936-aeaa-42a2-85bf-c3dc0a5d1ee7.png)
+
+**Note** in the gvim window, type the follwing code and get the .v file of a2111o gate:
+```
+:sp ../my_lib/lib/sky130_fd_sc_hd__a2111o.behavioural.v
+```
+Instead, if we wish to see the .v file with power ports included, type
+```
+:sp ../my_lib/lib/sky130_fd_sc_hd__a2111o.behavioural.pp.v
+```
+The below snapshot is taken from the lecture (as I didn't want to tamper the .lib file). It is observed that the parameters such as power etc., are different for different varity of cells  even if they are all 2 input AND gates only.
+
+![image](https://user-images.githubusercontent.com/14873110/166125647-1a13c18c-c45f-46e1-8238-534a50310753.png)
+
+It was also observed by one of the workshopian that the attribute cell_footprint is same for all the variants. Below is the snapshot of the discussion I had with him.
+
+![image](https://user-images.githubusercontent.com/14873110/166125725-7475afa0-9c95-426c-b178-e468e37d5ba8.png)
+
+
+![image](https://user-images.githubusercontent.com/14873110/166125732-02b51a9d-90d1-4717-9a47-afb22ad44068.png)
+
+
+![image](https://user-images.githubusercontent.com/14873110/166125739-4ae2d9fe-bfdc-4b77-ab71-55078c38dd1c.png)
+
+![image](https://user-images.githubusercontent.com/14873110/166125746-9ab08cbc-ef85-4b82-a389-8df82a375a36.png)
+
+![image](https://user-images.githubusercontent.com/14873110/166125769-ebfb1060-db57-492a-9f8c-8c7efe69fb28.png)
+
+
+![image](https://user-images.githubusercontent.com/14873110/166125778-2b2b2c92-9462-4cd5-a4d4-a089258d6c69.png)
+
+
+
+
+
 
 
 
