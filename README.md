@@ -51,7 +51,9 @@ _Question_- How does a simulator work?<br />
 _Answer_- A simulator keeps 'checking' for changes in the input and changes the output accordingly. **No change in the input => No change in the output**
 
 _Question_- Explain the testbench set-up using a block diagram.<br />
+
 _Answer_- ![image](https://user-images.githubusercontent.com/14873110/165384067-4e711427-2b11-4f42-9518-1811f38fa671.png)<br />
+
 Note: The design may have primary input(s) and primary output(s), but a testbench doesn't.<br />
 
 _Question_- What is gtkwave?<br /> 
@@ -74,6 +76,7 @@ This is an introductoy video to the labs. This is **Lab-1** It explains about th
    //*This creates a clone of vsdflow. You should see the folder on your desktop*//
 
    The below sequence of codes will show the files that are present in the vsdflow folder:
+   
    ![image](https://user-images.githubusercontent.com/14873110/165394205-ab3a3c77-0298-4c2d-952c-ba3c1a054dda.png)
 
 3. In the vsdflow directory, clone another repository by using: 
@@ -82,15 +85,18 @@ This is an introductoy video to the labs. This is **Lab-1** It explains about th
    ```
 
    By using the ls command, we should be able to see the following folder in the vsdflow folder:
+  
    ![image](https://user-images.githubusercontent.com/14873110/165395149-294027a6-a1f1-4ae6-877d-303c2fdbf243.png)
 
 4. Check for the standard SKY130 library using the following sequence of commands:
+
    ![image](https://user-images.githubusercontent.com/14873110/165395883-fe31485b-f5d9-45cd-b67a-a4dc2403516a.png)
 
 5. Come back to the sky130RTLDesignAndSynthesisWorkshop directory<br />
    note: use ```cd ..``` to come back one step out of the present directory, and get into verilog_files folder.<br />
    note: use ```cd foldername``` to enter into the _foldername_ directory.<br />
    Now use the _ls_ command to view all the verilog source files and testbench files required for the workshop labs. A screenshot is provided for reference:
+   
    ![image](https://user-images.githubusercontent.com/14873110/165397441-75c6ab8e-e978-4495-b0e2-c7420b0d39b3.png)
 
 
@@ -98,9 +104,11 @@ This is an introductoy video to the labs. This is **Lab-1** It explains about th
 This is part-1 of the actual lab videos. This is **Lab-2 part-1**It talks on how to use iverilog and gtkwave. A 2x1 MUX is implemented (loaded).
 
 1. A verilog file called good_mux.v(from the _verilog_files_ directory) is called along with its TB file tb_good_mux.v. The command used for this purpose is _iverilog    good_mux.v tb_good_mux.v_. A screenshot from the terminal is attached for reference:
+
    ![image](https://user-images.githubusercontent.com/14873110/165417277-2b312fbe-6985-4ce9-a4e7-9377daaf1ee4.png)
 
 2. Once the above command is run, a new file called _a.out_ appears in the _verilog_files_ directory (refer below screenshot):
+
    ![image](https://user-images.githubusercontent.com/14873110/165418179-6f06f414-419f-4001-8771-9ae562f6b5ff.png)
 
 3. The following command is used to execute this a.out file. 
@@ -108,20 +116,27 @@ This is part-1 of the actual lab videos. This is **Lab-2 part-1**It talks on how
    ./a.out
    ```
    This is going to create a dumpfile (refer below screenshot):
+   
    ![image](https://user-images.githubusercontent.com/14873110/165418395-860b6131-0c13-4d4e-b3c2-12a8cb13f31f.png)
 
 4. This VCD file is then run using gtkwave command as shown below:
+
    ![image](https://user-images.githubusercontent.com/14873110/165419523-5074d249-ead3-428b-bd5b-1d41a2805d77.png)
 
 5. After the above step, a new window pops-up (GTKWave Analyzer). It is shown below:
+
    ![image](https://user-images.githubusercontent.com/14873110/165420862-323323ec-4e3c-403d-b6c6-8c463301c541.png)
 
 6. If we observe the timescale in the above pic, each time step is 1ps (1ps = 10^-12s), but the simulation time is 300000ps (refer step4 pic last line). Because of      this, we can't observe the whole waveform until we zoom out. For this, click on this button (shown below):
+
    ![image](https://user-images.githubusercontent.com/14873110/165422388-6875ae9e-4859-4ccd-b880-4746e5c49c98.png)
+   
    Then the waveforms should appear as shown:
+   
    ![image](https://user-images.githubusercontent.com/14873110/165422433-a9d1c263-5b57-4622-ab1d-334aba2a2709.png)
 
    Check out the below figure to know what various other buttons do:
+   
    ![image](https://user-images.githubusercontent.com/14873110/165422999-3337205b-80d4-4954-a5fa-8852afe03e13.png)
   
 **Video-3:**<br />
@@ -135,14 +150,18 @@ gvim tb_good_mux.v -o good_mux.v
 note: Check the directory before typing the above command. It should be _~/Desktop/vsdflow/sky130RTLDesignAndSynthesisWorkshop/verilog_files$_
 
 The following window then opens:
+
    ![image](https://user-images.githubusercontent.com/14873110/165472993-c500fc17-abd2-41c1-8775-69c842883d2b.png)
    
 The following is the TB (design code is completely seen in the above pic. Note that the design follows _behavioural_ style):
+
    ![image](https://user-images.githubusercontent.com/14873110/165473396-81221336-2939-4f5d-b8de-5c43b5203749.png)
 
  Note:
+ 
    ![image](https://user-images.githubusercontent.com/14873110/165477253-3342cc0f-7ff9-420e-b3d8-d6e73387f8ea.png)
  More notes:
+ 
    ![image](https://user-images.githubusercontent.com/14873110/165479227-966a8e9d-3c24-441b-8aa0-737d30150ae1.png)
  
 -------------------
@@ -203,6 +222,18 @@ _Answer_: Earlier we verified the design by giving the design file and the TB as
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Labs using Yosys and SKY130 PDKs
+
+Whatever is discussed regarding synthesis, is implemented in this heading in three videos. 
+
+**Video-1**
+
+1. Yosys is invoked using ```yosys``` command. **NOTE**: Check the directory before invoking yosys. It SHOULD be verilog_files directory as all the my_lib files are here.
+
+![image](https://user-images.githubusercontent.com/14873110/166119299-d8c80aa6-cf6c-45c3-9f35-59ec50d869ac.png)
+
+2. Use ```read_liberty -lib``` command to read the library.
+
+![image](https://user-images.githubusercontent.com/14873110/166120197-5660ea21-319e-4e81-8ee3-fd1eb8ec87d2.png)
 
 
 
