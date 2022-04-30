@@ -344,8 +344,11 @@ The below snapshot is taken from the lecture (as I didn't want to tamper the .li
 It was also observed by one of the workshopian that the attribute cell_footprint is same for all the variants. Below is the summary of the discussion I had with him.
 
 ```
-The cell_footprint attribute is given the same to all cells during the abc phase. After PnR, whichever footprint class needs to be assigned (as per layout specs) would be assigned to this cell_footprint attribute (by swapping with some other footprint class or not swapping) using the in_place_swap_mode attribute.
+The cell_footprint attribute is given the same to all cells during the abc phase.
+After PnR, whichever footprint class needs to be assigned (as per layout specs) would be assigned to this cell_footprint attribute 
+(by swapping with some other footprint class or not swapping) using the in_place_swap_mode attribute.
 ```
+
 
 
 
