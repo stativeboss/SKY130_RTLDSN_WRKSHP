@@ -235,6 +235,34 @@ Whatever is discussed regarding synthesis, is implemented in this heading in thr
 
 ![image](https://user-images.githubusercontent.com/14873110/166120197-5660ea21-319e-4e81-8ee3-fd1eb8ec87d2.png)
 
+3. Use ```read_verilog``` command to read the design file.
+
+![image](https://user-images.githubusercontent.com/14873110/166120432-c13cf275-076b-4297-9177-920a9b381da3.png)
+
+**Note**: Need to explore about AST representation and RTLIL representation later. Kunal's reply when one of the workshopian raised this query:
+```
+It's an intermediate representation (like proto RTL)
+
+You can find all documentation here
+http://eddiehung.github.io/yosys/d1/d01/structRTLIL_1_1Design.html
+```
+4. Use ```synth -top```. More about this in later part of document.
+
+![image](https://user-images.githubusercontent.com/14873110/166120654-c3058e7a-f0fd-4ff6-84ba-f71dc07427b7.png)
+
+**Note**: Later, explore all the data that pops up after this command.
+
+Small bit of all that data is snapped and put below. It shows the final result:
+
+![image](https://user-images.githubusercontent.com/14873110/166120712-ba54541d-a837-4699-bc3b-e2e2f17c6718.png)
+
+5. Use ```abc -liberty``. Here, we need to specify the directory and be wary of the double underscore before 'tt' sky130_fd_sc_hd__tt025C_1v80.lib.
+
+![image](https://user-images.githubusercontent.com/14873110/166121434-406d1bdd-8a10-4614-a14d-544307cf3728.png)
+
+ **Note**:
+
+
 
 
 
