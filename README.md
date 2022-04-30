@@ -341,22 +341,15 @@ The below snapshot is taken from the lecture (as I didn't want to tamper the .li
 
 ![image](https://user-images.githubusercontent.com/14873110/166125647-1a13c18c-c45f-46e1-8238-534a50310753.png)
 
-It was also observed by one of the workshopian that the attribute cell_footprint is same for all the variants. Below is the snapshot of the discussion I had with him.
+It was also observed by one of the workshopian that the attribute cell_footprint is same for all the variants. Below is the summary of the discussion I had with him.
 
-![image](https://user-images.githubusercontent.com/14873110/166125725-7475afa0-9c95-426c-b178-e468e37d5ba8.png)
-
-
-![image](https://user-images.githubusercontent.com/14873110/166125732-02b51a9d-90d1-4717-9a47-afb22ad44068.png)
-
-
-![image](https://user-images.githubusercontent.com/14873110/166125739-4ae2d9fe-bfdc-4b77-ab71-55078c38dd1c.png)
-
-![image](https://user-images.githubusercontent.com/14873110/166125746-9ab08cbc-ef85-4b82-a389-8df82a375a36.png)
-
-![image](https://user-images.githubusercontent.com/14873110/166125769-ebfb1060-db57-492a-9f8c-8c7efe69fb28.png)
+```
+The cell_footprint attribute is given the same to all cells during the abc phase. After PnR, whichever footprint class needs to be assigned (as per layout specs) would be assigned to this cell_footprint attribute (by swapping with some other footprint class or not swapping) using the in_place_swap_mode attribute.
+```
 
 
-![image](https://user-images.githubusercontent.com/14873110/166125778-2b2b2c92-9462-4cd5-a4d4-a089258d6c69.png)
+
+
 
 
 
