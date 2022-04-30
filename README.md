@@ -348,6 +348,9 @@ The cell_footprint attribute is given the same to all cells during the abc phase
 After PnR, whichever footprint class needs to be assigned (as per layout specs) would be assigned to this cell_footprint attribute 
 (by swapping with some other footprint class or not swapping) using the in_place_swap_mode attribute.
 ```
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Hierarchial vs Flat Synthesis
 
 
 
