@@ -17,6 +17,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Introduction to open-source Verilog simulator iverilog](#introduction-to-open-source-verilog-simulator-iverilog)
 - [Labs using iverilog and gtkwave](#labs-using-iverilog-and-gtkwave)
 - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
+- [Labs using Yosys and SKY130 PDKs](#labs-using-yosys-and-sky130-pdks)
 - [Introduction to timing.libs](#introduction-to-timing.libs)
 - [Heirarchial vs Flat Synthesis](#heirarchial-vs-flat-synthesis)
 - [Various flop coding styles and Optimisation](#various-flop-coding-styles-and-optimisation)
@@ -32,7 +33,6 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Labs on Incomplete Overlapping If case](#labs-on-incomplete-overlapping-if-case)
 - [For loop and For generate](#for-loop-and-for-generate)
 - [Labs on For loop and For generate](#labs-on-for-loop-and-for-generate)
-- [Assesments](#assessments)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Introduction to open-source Verilog simulator iverilog
@@ -157,12 +157,12 @@ A co-workshopian(is this word even there?) asked same question and the TA replie
    
 This section also have three videos.
 
-**Video-1:**
+**Video-1:** <br />
 In this video it is explained as to how we go about synthesizing the _good_mux_ design using Yosys.<br />
 
 Actually.... the right video sequence for this heading is video2 -> video3 -> video1. So I'll doucment in this sequence:
 
-**Video-2**
+**Video-2:** <br />
 This video explains what logic synthesis is and how we go about synthesizing logic.<br />
 
 _Question_: What is RTL Design?
@@ -174,14 +174,40 @@ Design(input)                 -> Decide which gates to use -> Make connections b
 and Frontend Library (input) <br />
 
 
-_Question_: What is a library file (extension .lib)?
-_Answer_: It is a 'bucket' of logical gates. It'll have different variations of a same gate (slow, medium, fast, 2 input, 3 input etc.,).
+_Question_: What is a library file (extension .lib)?<br />
+_Answer_: It is a 'bucket' of logical gates. It'll have different variations of a same gate (slow, medium, fast, 2 input, 3 input etc.,).<br />
 
-_Question_: Why do we need different flavours of gates?
-_Answer_: To meet the timing requirements (primarily... power and area are other creteria).
+_Question_: Why do we need different flavours of gates?<br />
+
+**Video-3:** <br />
+
+_Answer_: To meet the timing requirements (primarily... power and area are other creteria).<br />
 
 **Note** : Faster gates provide good processing power but would be more wide and hence occupy more space. They might also lead to hold-time violations.<br />
  Just a quick recap: Hold-time is the time required for the signal to stay stable by the time clock arrives. (I'm the signal waiting at rly station for the clock train). The guidance offered to the Synthesizer regarding hold-time and set-up time violations is called 'Constraints'. <br />
+ 
+ **Video-1:** <br />
+ 
+ A bit about Yosys from the abstract of its manual: <br />
+ 
+![image](https://user-images.githubusercontent.com/14873110/166118344-a68e0c9a-ff42-4954-a767-9da1aea604cd.png)
+
+- The design is given as input to Yosys using ```read_verilog``` command.
+- The .lib is given as input using ```read_liberty``` command.
+- The ouput netlist is generated using ```write_verilog``` command.
+
+**Note** :Liberty format is an industry standard to describe library cells of a particular technology (https://vlsiuniverse.blogspot.com/2016/12/liberty-format-introduction.html). It's manual can be found at https://people.eecs.berkeley.edu/~alanmi/publications/other/liberty07_03.pdf.
+
+_Question_: How to verify the synthesis?
+_Answer_: Earlier we verified the design by giving the design file and the TB as inputs to the iverilog and then observing the output (VCD file) using gtkwave. Now, we give the Netlist(instead of design file) and TB as inputs to iverilog and observe in gtkwave. The waveforms should be exactly same as what we got when we run using design file.<br />
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Labs using Yosys and SKY130 PDKs
+
+
+
+
+
  
  
  
