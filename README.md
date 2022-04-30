@@ -264,10 +264,14 @@ Small bit of all that data is snapped and put below. It shows the final result:
  
  ![image](https://user-images.githubusercontent.com/14873110/166121487-93289625-1ef8-4e4c-86a5-c15c0d96b15b.png)
 
-_What happens if we execute the above command without specifying a particular library (in our case sky130)?_ <br />
-_The ABC loads it's in-built library and executes the command_. (courtesy: Sam Kambadur)
+```
+What happens if we execute the above command without specifying a particular library (in our case sky130)? 
+The ABC loads it's in-built library and executes the command.
 
-6. Use ```show``` command to see the graphical version of logic it has synthesized.
+courtesy: Sam Kambadur
+```
+
+6. Use ```show``` command to see the graphical version (graphviz file with .dot extension) of logic it has synthesized.
 
 ![image](https://user-images.githubusercontent.com/14873110/166121557-93ba836b-0ed3-4284-9f07-266dfe810c22.png)
 
@@ -281,6 +285,27 @@ _The ABC loads it's in-built library and executes the command_. (courtesy: Sam K
 The instructor makes sense of the graphical version that he got.
 
 ![image](https://user-images.githubusercontent.com/14873110/166121874-51fef153-30af-4ac8-bcfc-0f66c6b9ef31.png)
+
+**Video-3**
+
+1. Use ```write_verilog``` to get the netlist.
+
+![image](https://user-images.githubusercontent.com/14873110/166122678-f5ee841a-4dea-4777-8090-54d34c9743b0.png)
+
+**Note**: We can give any name, but good_mux_netlist makes more sense.
+
+2. The netlist can be viewed by using ```!gvim good_mux_netlist.v``` command line.
+
+![image](https://user-images.githubusercontent.com/14873110/166122757-8a453517-59c8-44b5-a353-0412c6012c31.png)
+
+3. We may choose to use ```write_verilog -noattr good_mux_netlist.v``` to see an easily readable version of netlist. The below pic shows code after executing !gvim command.
+
+![image](https://user-images.githubusercontent.com/14873110/166122812-ca7da7e6-cca6-461d-b434-c22a35759362.png)
+
+
+
+
+
 
 
 
