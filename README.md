@@ -302,6 +302,11 @@ The instructor makes sense of the graphical version that he got.
 
 ![image](https://user-images.githubusercontent.com/14873110/166122812-ca7da7e6-cca6-461d-b434-c22a35759362.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+## Introduction to timing.libs
+
+
+
 
 
 
