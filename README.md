@@ -400,6 +400,39 @@ Check that the input literals are negated and then given as inputs to a NAND gat
 
 The details of this can be found at https://bit.ly/3F8tOUu
 
+**Video-2**:
+
+1. Use ```flatten```.
+2. Use ```write_verilog -noattr multiple_modules_flat.v```.
+
+![image](https://user-images.githubusercontent.com/14873110/166145497-16828e7f-be88-4d55-b019-ca3d07c39cb7.png)
+
+**Note**: We don't see any hierarchies in this one (such as sub-module1 or sub-module2 etc.,). It's a single netlist.
+3. Use ```exit```.
+4. Now follow this: 
+
+```
+1. yosys
+2. read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. read_verilog multiple_modules.v
+4. write_verilog -noattr multiple_modules.v
+5. synth -top multiple_modules
+6. flatten
+7. show
+```
+
+![image](https://user-images.githubusercontent.com/14873110/166146963-1bf54644-a80a-4873-a75b-985fe7371fb5.png)
+
+**Note**: that there are no sub-modules in this one unlike the hierarchial case.<br >
+
+
+_Given multiple modules, what is the way to synthesize at sub-module level?_
+
+```
+1. yosys
+2.read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3.read_verilog 
+
 
 
 
