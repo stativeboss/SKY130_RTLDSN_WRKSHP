@@ -497,6 +497,51 @@ The right command gives the follwing waveform:
 
 ![image](https://user-images.githubusercontent.com/14873110/166163258-2a84b200-a5fc-4fc4-a8fb-c131fa3eedb9.png)
 
+It may be observed that the output goes low as soon as async_reset goes high **independent** of the clock signal or D.
+
+Next we analyse the D FF with synchronous and asynchronous reset. Use the following commands:
+
+```
+1. iverilog dff_asyncres_syncres.v tb_dff_asyncres_syncres.v
+2. ./a.out
+3. gtkwave tb_dff_asyncres_syncres.vcd
+```
+
+![image](https://user-images.githubusercontent.com/14873110/166163533-227e8004-93eb-45ee-85c1-bb296d6eab8d.png)
+
+In the above snapshot, observe that when the clk is low the output is still high even if the sync_reset is high. As soon as the posedge clk is detected, the output falls to zero since the sync_reset is high.
+
+![image](https://user-images.githubusercontent.com/14873110/166163629-10c19c43-ca70-4a8e-b4e6-2d3d25ae879b.png)
+
+That is not the case in case of async_reset. As can be witnessed from the above pic, once async_reset is high, the output falls to zero irrespective of clk or D.
+
+**Video-4**:
+
+In this video, the above circuits are synthesized using yosys.<br />
+
+First is asynchrnous reset DFF. Follow the below commands:
+
+```
+1. read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. read_verilog dff_asyncres.v
+3. synth -top dff_asyncres
+4. dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /*Many times we'll have a seperate library for FF, but here it's all in my_lib only*/
+5. abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+6. show
+```
+
+![image](https://user-images.githubusercontent.com/14873110/166164821-4ab5978c-6642-41e7-9cba-28841441563b.png)
+
+Next is synchronous/Asynchrnous reset DFF. Follow same commands as above by replacing dff_asyncres with dff_asyncres_syncres.
+
+![image](https://user-images.githubusercontent.com/14873110/166165299-ef861910-3a30-4f06-b4d5-8bc62806e2cd.png)
+
+Checkout https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents/libraries/sky130_fd_sc_hd/cells/lpflow_isobufsrc/README.html
+
+
+
+
+
 
 
 
