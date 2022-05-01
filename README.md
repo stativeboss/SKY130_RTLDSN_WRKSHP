@@ -541,7 +541,48 @@ Checkout https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in
 
 **Video-5**
 
- _Question_: What happens when we try multiplying a 3-bit number by 2?
+ _Question_: What happens when we try multiplying a 3-bit number by 2?<br />
+ Use the following commands in the yosys environment:
+ ```
+ 1. read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ 2. read_verilog mult_2.v
+ 3. synth -top mul_2
+ 4. abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ 5. show
+ ```
+ 
+ ![image](https://user-images.githubusercontent.com/14873110/166165826-f56c9606-2901-41bf-bdb3-e84434307c7f.png)
+
+ ![image](https://user-images.githubusercontent.com/14873110/166165889-d9f9b6d2-9966-4688-8012-385ab3b8c0af.png)
+ 
+ 
+ **Video-6**
+ 
+ Multiplying a 3-bit number with 9. <br />
+ Check out the below theory:
+ 
+ ![image](https://user-images.githubusercontent.com/14873110/166166149-f1d541a1-28ea-4ab5-ac3a-5fc928bbaf9c.png)
+
+
+ Use following commands
+ ```
+ 1. read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ 2. read_verilog mult_8.v
+ 3. synth -top mult8
+ 4. abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ 5. show
+ ```
+ 
+ ![image](https://user-images.githubusercontent.com/14873110/166166197-c49c000d-439f-4d8b-a88f-f21b182b4cdc.png)
+
+![image](https://user-images.githubusercontent.com/14873110/166166247-027fe972-71a0-4c54-941d-471e358798ec.png)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ 
+
+
  
 
 
