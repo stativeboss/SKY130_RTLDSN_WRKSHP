@@ -439,6 +439,13 @@ _Given multiple modules, what is the way to synthesize at sub-module level?_
 ```
 ![image](https://user-images.githubusercontent.com/14873110/166153299-902f84c7-1fb3-4d13-be0b-eaf1738ff88b.png)
 
+_Question_: Why sub-module level syntyhesis?
+_Answer_: 
+1. Let's say we have a sub-module that repeats multiple times in a module. So instead of synthesizing same sub-module multiple times, it is time saving to synthesize it once and replicate it multiple times.
+2. If we give entire module to synthesize, the tool might get overloaded (and difficult for designer to debug the netlist too). So we divide the whole module into various sub-modules and synthesize these sub-modules seperately.
+
+
+
 
 
 
