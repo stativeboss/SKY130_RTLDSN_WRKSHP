@@ -539,6 +539,14 @@ Next is synchronous/Asynchrnous reset DFF. Follow same commands as above by repl
 Checkout https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in-rtd/contents/libraries/sky130_fd_sc_hd/cells/lpflow_isobufsrc/README.html
 
 
+**Video-5**
+
+ _Question_: What happens when we try multiplying a 3-bit number by 2?
+ 
+
+
+
+
 
 
 
