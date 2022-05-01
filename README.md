@@ -351,6 +351,28 @@ After PnR, whichever footprint class needs to be assigned (as per layout specs) 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Heirarchial vs Flat Synthesis
+Has two videos
+
+**Video-1**
+
+_Question_: What does synth -top do?
+
+1. Use command ```gvim multiple_modules.v```
+
+![image](https://user-images.githubusercontent.com/14873110/166139041-d1bb7018-0d2c-484e-944a-8fdb34b1519a.png)
+
+2. Open yosys using ```yosys``` command.
+3. Use ```read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib```
+4. Use ```read_verilog multiple_modules.v```. 
+
+**Note**: By mistake, I first executed the ```read_verilog``` command and then used ```read_liberty``` command. After that I used ```read_verilog``` again and the following error showed:
+
+![image](https://user-images.githubusercontent.com/14873110/166139329-f40cb3b2-c0f7-4086-a234-86e7fa4379ef.png)
+
+Later, I exited the yosys environment and re-entered the right sequence: ```read_liberty``` and then ```read_verilog```. Ponder why the wrong sequence won't work.
+
+
+
 
 
 
