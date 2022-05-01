@@ -371,6 +371,10 @@ _Question_: What does synth -top do?
 
 Later, I exited the yosys environment and re-entered the right sequence: ```read_liberty``` and then ```read_verilog```. Ponder why the wrong sequence won't work.
 
+5. Use ```synth -top multiple_modules```.
+6. Use ```abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib```.
+7. 
+
 
 
 
