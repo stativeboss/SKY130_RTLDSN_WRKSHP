@@ -373,7 +373,36 @@ Later, I exited the yosys environment and re-entered the right sequence: ```read
 
 5. Use ```synth -top multiple_modules```.
 6. Use ```abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib```.
-7. 
+
+**Note**: Using ```show``` command will generate an error here as the 'multiple_modules' file has two submodules. So we need to specify exactly to show multiple modules.<br />
+
+![image](https://user-images.githubusercontent.com/14873110/166142748-12174e07-602f-4413-aa98-8e9daa70324d.png)
+
+7. Use ```show multiple_modules```
+
+![image](https://user-images.githubusercontent.com/14873110/166142786-aae0d706-cdec-47e2-910b-40bdb3750136.png)
+
+**Notes** This is called the Hierarchial Design
+
+8. Use ```write_verilog -noattr multiple_modules_hier.v``` and then use ```!gvim multiple_modules_hier.v```.
+
+**Note**: The instructors library (probably an old one) implements OR gate as below:
+
+![image](https://user-images.githubusercontent.com/14873110/166144456-6921033a-159a-4a7e-b18b-165f69b44b86.png)
+
+Check that the input literals are negated and then given as inputs to a NAND gate to realise an OR gate. This could also have been done with a NOR gate followed by an inverter. So, why did the tool 'chose' to use an extra inveter?<br />
+
+![image](https://user-images.githubusercontent.com/14873110/166144706-56624810-77c4-4f43-b9af-ec978766c7e8.png)
+
+**Note**: My library used a different gate:
+
+![image](https://user-images.githubusercontent.com/14873110/166144743-5d3bb509-06a3-4fab-9074-5899e7f7297c.png)
+
+The details of this can be found at https://bit.ly/3F8tOUu
+
+
+
+
 
 
 
