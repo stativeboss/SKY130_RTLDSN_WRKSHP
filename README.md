@@ -465,7 +465,20 @@ So we want an element to store the value, making it more stable and less prone t
 
 In set-up1, the glitch gets propagated to the output. This doesn't happen in set-up2 because of the presence of D-FF (this gives input to output only at posedge clk).
 
-We need to initialise these FF as without initialisation, the combinational ckt would yield a garbage value. Set/Reset are used to initialise a FF. These signals could be either synchronous (with clock) or asynchronous (independent of clock).
+We need to initialise these FF as without initialisation, the combinational ckt would yield a garbage value. Set/Reset are used to initialise a FF. These signals could be either synchronous (with clock) or asynchronous (independent of clock).<br />
+
+**Video-2**
+
+From the dff_asyncret_syncres.v file:
+
+![image](https://user-images.githubusercontent.com/14873110/166162300-b6fceb7a-b592-4574-b5f6-b7a24f9742bd.png)
+
+
+- Observe that we don't give synchronous signal as trigger when calling the always block.
+- If we wish to have asynchronous (or synchronous) Set instead of reset, just assign the output a value of 1 instead of 0 in the if/else conditions.
+
+![image](https://user-images.githubusercontent.com/14873110/166162950-9115eb50-f3ca-4964-b910-23f4ed2886a6.png)
+
 
 
 
