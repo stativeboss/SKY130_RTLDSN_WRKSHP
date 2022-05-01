@@ -581,6 +581,11 @@ Checkout https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in
 
 ## Introduction to optimisations
  
+ This section has three videos. The first video briefs about combinational optimisation techniques while the next two videos brief about sequential optimisations.
+ 
+ **Video-1**:
+ 
+ 
 
 
  
