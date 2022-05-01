@@ -429,9 +429,10 @@ The details of this can be found at https://bit.ly/3F8tOUu
 _Given multiple modules, what is the way to synthesize at sub-module level?_
 
 ```
-1. yosys
-2.read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-3.read_verilog 
+1. exit
+2. yosys
+3. read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+4. read_verilog 
 
 
 
