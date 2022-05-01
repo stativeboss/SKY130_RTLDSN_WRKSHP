@@ -217,7 +217,7 @@ _Answer_: To meet the timing requirements (primarily... power and area are other
 
 **Note** :Liberty format is an industry standard to describe library cells of a particular technology (https://vlsiuniverse.blogspot.com/2016/12/liberty-format-introduction.html). It's manual can be found at https://people.eecs.berkeley.edu/~alanmi/publications/other/liberty07_03.pdf.
 
-_Question_: How to verify the synthesis?
+_Question_: How to verify the synthesis?<br />
 _Answer_: Earlier we verified the design by giving the design file and the TB as inputs to the iverilog and then observing the output (VCD file) using gtkwave. Now, we give the Netlist(instead of design file) and TB as inputs to iverilog and observe in gtkwave. The waveforms should be exactly same as what we got when we run using design file.<br />
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -439,7 +439,7 @@ _Given multiple modules, what is the way to synthesize at sub-module level?_
 ```
 ![image](https://user-images.githubusercontent.com/14873110/166153299-902f84c7-1fb3-4d13-be0b-eaf1738ff88b.png)
 
-_Question_: Why sub-module level syntyhesis?
+_Question_: Why sub-module level syntyhesis?<br />
 _Answer_: 
 1. Let's say we have a sub-module that repeats multiple times in a module. So instead of synthesizing same sub-module multiple times, it is time saving to synthesize it once and replicate it multiple times.
 2. If we give entire module to synthesize, the tool might get overloaded (and difficult for designer to debug the netlist too). So we divide the whole module into various sub-modules and synthesize these sub-modules seperately.
@@ -452,7 +452,7 @@ There are six videos under this heading. It explains how to code a flip-flop (FF
 
 **Video-1**
 
-_Question_: Why Flip-Flops?
+_Question_: Why Flip-Flops?<br />
 _Theory_: **Glitch by propagation delay**
 
 ![image](https://user-images.githubusercontent.com/14873110/166161221-8352a404-a82f-4983-a038-07b8c6cc1730.png)
