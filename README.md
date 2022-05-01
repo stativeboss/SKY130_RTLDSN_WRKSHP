@@ -9,7 +9,7 @@ A good RTL design engineer is expected to understand which code (or code style) 
 
 The workshop uses SkyWater OpenSource Process Design Kit (or PDK in short). SkyWater PDK (https://github.com/google/skywater-pdk) is a Free and Open Source Silicon(or FOSS in short) PDK that is an output of the collaboration between Google and SkyWater Technology. It targets the SKY130 process node (180nm- 130nm hybrid technology). 
 
-This repo aims to make a record of the labs performed while briefing on what is covered in each video of the worshop. Each header in the table of contents below indicates a superficial heading which would comprise of either one or a few video's gist. The final topic covers my findings while doing the assessments.
+This repo aims to make a record of the labs performed while briefing on what is covered in each video of the worshop. Each header in the table of contents below indicates a superficial heading which would comprise of either one or a few video's gist.
 
 
 ## Table of Contents
@@ -443,6 +443,35 @@ _Question_: Why sub-module level syntyhesis?
 _Answer_: 
 1. Let's say we have a sub-module that repeats multiple times in a module. So instead of synthesizing same sub-module multiple times, it is time saving to synthesize it once and replicate it multiple times.
 2. If we give entire module to synthesize, the tool might get overloaded (and difficult for designer to debug the netlist too). So we divide the whole module into various sub-modules and synthesize these sub-modules seperately.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Various flop coding styles and Optimisation
+
+There are six videos under this heading. It explains how to code a flip-flop (FF), different types of FF available, and different coding styles possible. All the FF are available under verilog_files. Open these files using gvim.
+
+**Video-1**
+
+_Question_: Why Flip-Flops?
+_Theory_: **Glitch by propagation delay**
+
+![image](https://user-images.githubusercontent.com/14873110/166161221-8352a404-a82f-4983-a038-07b8c6cc1730.png)
+
+It is evident from the above explanation that combinational circuits suffer from glitches. Combination of combinational circuits is even more prone. <br />
+So we want an element to store the value, making it more stable and less prone to glitches. And that is done by a FF.
+
+![image](https://user-images.githubusercontent.com/14873110/166161586-3191c0ac-a7cf-48c6-91fe-fcbc0539cc51.png)
+
+
+In set-up1, the glitch gets propagated to the output. This doesn't happen in set-up2 because of the presence of D-FF (this gives input to output only at posedge clk).
+
+We need to initialise these FF as without initialisation, the combinational ckt would yield a garbage value. Set/Reset are used to initialise a FF. These signals could be either synchronous (with clock) or asynchronous (independent of clock).
+
+
+
+
+
+
 
 
 
