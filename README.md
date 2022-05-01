@@ -479,6 +479,25 @@ From the dff_asyncret_syncres.v file:
 
 ![image](https://user-images.githubusercontent.com/14873110/166162950-9115eb50-f3ca-4964-b910-23f4ed2886a6.png)
 
+**Video-3**:
+
+We first analyse the D FF with asynchronous reset. Use the following commands:
+
+```
+1. iverilog dff_asyncres.v tb_dff_asyncres.v
+2. ./a.out
+3. gtkwave tb_dff_asyncres.vcd
+```
+
+**Note**: By mistake, gave the extension in line 3 as .v instead of .vcd and the tool asked to check whether it is a vcd file!
+
+![image](https://user-images.githubusercontent.com/14873110/166163201-38b704fa-55c3-4356-8bec-edd0df1a0b88.png)
+
+The right command gives the follwing waveform:
+
+![image](https://user-images.githubusercontent.com/14873110/166163258-2a84b200-a5fc-4fc4-a8fb-c131fa3eedb9.png)
+
+
 
 
 
