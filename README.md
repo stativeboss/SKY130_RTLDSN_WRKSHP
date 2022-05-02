@@ -606,6 +606,21 @@ Sequential logic optimisation techniques could be braodly classified as basic te
 
 **Video-3**:
 
+- State Optimisation: Minimizing the number of states to reduce the number of FF used.
+- Cloning: Observe the following figure
+
+![image](https://user-images.githubusercontent.com/14873110/166174283-ecc81714-fa4e-4014-b6ef-5864dbf0f9c9.png)
+
+But how is this an _optimisation_?
+
+- Retiming: Observe the following figure
+
+![image](https://user-images.githubusercontent.com/14873110/166174598-076f5d2b-b510-41b8-9a8e-ac7fe5362c97.png)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
