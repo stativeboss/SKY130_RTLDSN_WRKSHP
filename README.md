@@ -787,7 +787,38 @@ Cross verifying with RTL gtkwave, we observe that the waveforms won't match.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 
+## If Case Constructs
+
+If statement
+
+- If esle statements are implemented as a series of muxes.
+- Bad coding style leads to inferred latches (casued because of incomplete if statements).
+- Inferred latches are good for sequentil circuit design but should not be there for combinational circuit design.<br />
+
+Case statement
+
+- Case statement is also going to infer a mux
+- Incomplete case statement will also lead to inferred latches (for the undefined cases, the variables will latch onto output).
+- Case statements with default case will avoid inferred latches.
+- Partial assignments is another caveat that creates inferred latches. (Assign all the outputs in all the segments of case)
+
+Note that if-else is executed on a priority manner. Meaning that if I have an if else statement, when the if condition is satisfied, the code comes out to end. This is not the same in 'case'. All the cases are checked one-by-one and whichever case satisfies is executed. That is why we should not have an overlapping case statement.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## For loop generates
+
+Loop constructs are of two types: for loop (evaluating expressions) and generate for loop (instantiating hardware multiple times) <br />
+
+For loops are used in 'always' block, while the Generate for loops are used outside of the always blocks.<br />
+
+- For loop comes in handy in implementing very wide mux/de-mux
+- We can also use if-generate block, but for-generate and if-generate should be used only outside the always block.
+
+One example where for generate comes in handy would be a ripple carry adder where a full adder needs to be instantiated multiple times.
+
+
+
 
 
 
