@@ -621,6 +621,35 @@ But how is this an _optimisation_?
 
 ## Combinational Logic Optimisations
 
+This heading has two videos under it.
+
+**Video-1**:
+
+We use 'opt' files. These files can be seen by using ```ls *opt*``` command.
+
+![image](https://user-images.githubusercontent.com/14873110/166217532-fa5f2f4f-a04c-468d-ab84-676f5def433e.png)
+
+The following snippet shows what's in the opt_check.v:
+
+![image](https://user-images.githubusercontent.com/14873110/166218212-1b0a16d4-9f2d-49e9-b145-abc7835b47e7.png)
+
+The following snippet shows what's in the opt_check2.v:
+
+![image](https://user-images.githubusercontent.com/14873110/166218349-b7a57e41-2c2f-4d97-9e97-80936e66eddc.png)
+
+So basically, opt_check is a mux that'd act as an And gate while opt_check2 is a mux that'd act as an OR gate.
+
+Upon synthesis, we see that the tool actually uses AND gate and OR gate instead of MUX based implementation. Refer below pics.
+
+![image](https://user-images.githubusercontent.com/14873110/166220794-be945d59-42c1-422c-b944-8d2d1d6c2837.png)
+
+![image](https://user-images.githubusercontent.com/14873110/166221263-0ca2796c-eaba-4a7a-ab08-b21a20522a12.png)
+
+
+**Video-2**
+
+
+
 
 
 
