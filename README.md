@@ -811,6 +811,38 @@ Note that if-else is executed on a priority manner. Meaning that if I have an if
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Labs on Incomplete If case
 
+The file incomp_if.v is analysed:<br />
+
+Input the following commands:
+```
+1. gvim *incomp* -o /this opens all the files that have the string 'incomp' in their file name/
+2. iverilog incomp_if.v tb_incomp_if.v
+3. ./a.out
+4. gtkwave tb_incomp_if.vcd
+```
+
+![image](https://user-images.githubusercontent.com/14873110/166313639-705baeba-cf83-48db-86e4-24f1a7a0dafe.png)
+
+
+![image](https://user-images.githubusercontent.com/14873110/166313249-d9fd4cf5-e640-41e0-9bb7-243c0510e70c.png)
+
+Upon synthesis, it yields following graphviz:
+
+![image](https://user-images.githubusercontent.com/14873110/166313838-3bc7b884-7481-4c3c-8f1f-be71d58f6c06.png)
+
+The file incomp_if2.v is analysed:<br />
+
+![image](https://user-images.githubusercontent.com/14873110/166314602-9ddcb1e9-50a9-40f4-bf8a-6ca0c17dfb60.png)
+
+Upon simulation:
+
+![image](https://user-images.githubusercontent.com/14873110/166315630-9a9028c0-ebae-4fd2-ab8d-da8eef49de54.png)
+
+Upon synthesis:
+
+![image](https://user-images.githubusercontent.com/14873110/166315732-d384ab79-9540-4a67-987d-fff88b95fed6.png)
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Labs on Incomplete Overlapping If case
 
