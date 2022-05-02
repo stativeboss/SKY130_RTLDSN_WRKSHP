@@ -23,7 +23,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Various flop coding styles and Optimisation](#various-flop-coding-styles-and-optimisation)
 - [Introduction to optimisations](#introduction-to-optimisations)
 - [Combinational logic optimisations](#combinational-logic-optimisations)
-- [Sequential logic optimisations](#sequential-logic-optimisation)
+- [Sequential logic optimisations](#sequential-logic-optimisations)
 - [Sequential optimisations for unused outputs](#sequential-optimisation-for-unused-outputs)
 - [GLS, Synthesis-Simulation mismatch, Blocking and Non-blocking statements](#gls-synthesis-simulation-mismatch-blocking-non-blocking-statements)
 - [Labs on Sythesis and Simulation mismatch](#labs-on-synthesis-and-simulation-mismatch)
@@ -671,6 +671,9 @@ Implemented the multiple_module_opt without flattening and without opt and the g
 
 ![image](https://user-images.githubusercontent.com/14873110/166231864-cdb5e3d8-863f-465d-a554-f655aa4646e1.png)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Sequential logic optimisations
 
 
 
