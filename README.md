@@ -765,6 +765,17 @@ The files ternary_operator_mux.v and its TB are given to iverilog and then the w
 The above waveform shows the behaviour of 2x1 mux.
 
 Now we synthesize it and check:
+![image](https://user-images.githubusercontent.com/14873110/166298053-9139e3d3-48bc-4d50-87f3-51e22a437d34.png)
+
+Use the following commands:
+```
+1. iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux.v tb_ternary_operator_mux.v
+2. ./a.out
+3. gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://user-images.githubusercontent.com/14873110/166299013-810e709c-c06f-48ec-af02-f63c6fcec87b.png)
+
+
 
 
 
