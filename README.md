@@ -27,7 +27,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Sequential optimisations for unused outputs](#sequential-optimisations-for-unused-outputs)
 - [GLS, Synthesis-Simulation mismatch, Blocking and Non-blocking statements](#gls-synthesis-simulation-mismatch-blocking-and-non-blocking-statements)
 - [Labs on Sythesis and Simulation mismatch](#labs-on-synthesis-and-simulation-mismatch)
-- [Labs on Synthesis and Simulation mismatch for blocking statements](#labs-on-synthesis-and-simulation-mismatch-forblocking-statements)
+- [Labs on Synthesis and Simulation mismatch for blocking statements](#labs-on-synthesis-and-simulation-mismatch-for-blocking-statements)
 - [If case constructs](#if-case-constructs)
 - [Labs on Incomplete If case](#labs-on-incomplete-if-case)
 - [Labs on Incomplete Overlapping If case](#labs-on-incomplete-overlapping-if-case)
