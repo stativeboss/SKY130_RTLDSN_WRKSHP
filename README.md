@@ -731,17 +731,36 @@ This is called _SEQUENTIAL OPTIMISATION FOR UNUSED OUTPUTS_
 
 ## GLS, Synthesis Simulation Mismatch, Blocking and Non Blocking Statements
 
-_Question_: What is GLS?
-_Answer_: Originally we ran simualtions with RTL code as unit under test. Now we'll run the simulation with netlist as unit under test. This is called Gate Level Synthesis (or GLS in short).
+_Question_: What is GLS?<br />
+_Answer_: Originally we ran simualtions with RTL code as unit under test. Now we'll run the simulation with netlist as unit under test. This is called Gate Level Synthesis (or GLS in short).<br />
 
-_Question_: Why GLS?
-_Answer_: We wish to verify whether the logic holds even after synthesis (reason why it might be different is answered next). Also, GLS considers the timing as we run it with _Delay annotation_ (https://www.linkedin.com/pulse/gate-level-simulation-comprehensive-overview-jerry-mcgoveran/).
+_Question_: Why GLS?<br />
+_Answer_: We wish to verify whether the logic holds even after synthesis (reason why it might be different is answered next). Also, GLS considers the timing as we run it with _Delay annotation_ (https://www.linkedin.com/pulse/gate-level-simulation-comprehensive-overview-jerry-mcgoveran/).<br />
 
-_Question_: Why does Synthesis-Simulation Mismatch happen?
-_Answer_: Mostly three reasons:
-          - Missing sensitivity list: For a mux, let's say we ask the ouput to respond only for change in select (but not input change) 
-          - Blocking/Non-blocking mishap: 
-          - Non-Standard Verilog coding: 
+_Question_: Why does Synthesis-Simulation Mismatch happen?<br />
+_Answer_: Mostly three reasons:<br />
+          - Missing sensitivity list: Example..for a mux, let's say we ask the ouput to respond only for change in select (but not input change) <br />
+          - Blocking/Non-blocking mishap: Let's say we have two FF, the output of which is assigned as input to the other. If we assign this first and then assign the             input of first FF to it's output, it'll create a mishap. _Use Non-blocking for sequential circuits_. <br />
+          - Non-Standard Verilog coding<br /
+Another instance of simulation-synthesis mismatch:
+```
+\snippet of full code\
+always @(*)
+begin
+y = m&c;
+m = a|b;
+end
+```
+Observe that here, m is being used before it's value get's updated (previous value m is used). This seems like a register is being used, but in synthesis, y = c.(a+b).
+This is a simulation synthesis mismatch. (Doubt: Simulation without optimisation and Synthesis with optimisation.. would that be a sim-sys mismatch?)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
