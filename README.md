@@ -712,6 +712,25 @@ The below snippet shows the synthesized dff_const4.v and dff_const5.v:
 ## Sequential Optimisations for Unused Outputs
 
 
+Let's say we are getting a 3-bit output from a module, while we use only one of these bits as a primary output. The remaining bits which are not being used would be optimised. For example, consider:
+
+![image](https://user-images.githubusercontent.com/14873110/166269528-8bbbe618-4d87-4b7a-8bd5-ab97f158711d.png)
+
+
+But the synthesizer actually gives the below output:
+
+![image](https://user-images.githubusercontent.com/14873110/166270155-5e0299b8-e423-4899-8eef-105ff95d6367.png)
+
+(The output is taken and inverted and fed as input to the same FF)
+
+This is called _SEQUENTIAL OPTIMISATION FOR UNUSED OUTPUTS_
+
+**Note**: Need to explore it further by changing the source file a little bit (changing output bit length, changing the initial state etc.,)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 
+
 
 
 
