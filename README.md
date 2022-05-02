@@ -709,7 +709,7 @@ The below snippet shows the synthesized dff_const4.v and dff_const5.v:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Sequential Optimizations for Unused Outputs
+## Sequential Optimisations for Unused Outputs
 
 
 
