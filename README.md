@@ -860,7 +860,57 @@ Upon synthesis:
 
 ![image](https://user-images.githubusercontent.com/14873110/166326466-7bc03faa-3760-46a2-9d03-1d3fc33db896.png)
 
+The following are the observations for comp_case.v:
 
+![image](https://user-images.githubusercontent.com/14873110/166327580-fdce063f-b49c-4850-a339-3bcbad4ab824.png)
+
+Upon simulation:
+
+![image](https://user-images.githubusercontent.com/14873110/166327706-6b0329e3-b0f5-4b2e-88d2-b47b260f77ea.png)
+
+Upon synthesis:
+
+![image](https://user-images.githubusercontent.com/14873110/166327894-28d91599-0969-4c24-ba1b-4370b6b3556d.png)
+
+The following is a partial assign case:
+
+Consider the code snippet below with i0, i1, and i2 as inputs, and x, and y as ouputs:
+
+```verilog
+case(sel)
+    2'b00 : begin
+            y = i0;
+            x = i2;
+            end
+    2'b01 : y = i1;
+    default : begin
+              x = i1;
+              y =i2;
+              end
+ endcase
+ ```
+ In case 01, x is not defined. So, even if we have a default case, when the case is 01, x will infer a latch. 
+ 
+ ![image](https://user-images.githubusercontent.com/14873110/166329825-668056a8-1762-4528-940a-462e55bea24e.png)
+
+Observe that there are no latches in the path of y. There is one latch in x's path.
+
+The following is a bad case:
+
+Consider the code snippet below with i0, i1, and i2 as inputs, and y as ouput:
+
+```verilog
+case(sel)
+    2'b00 : y = i0;
+    2'b01 : y = i1;        
+    2'b10 : y = i2;
+    2'b1? : y = i1;
+    
+endcase
+ ```
+ 
+ This is a bad case as the tool will get confused whether to assign y as i1 or i2 when the MSB of select line is high.
+             
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
