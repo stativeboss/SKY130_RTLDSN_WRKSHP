@@ -676,6 +676,18 @@ Implemented the multiple_module_opt without flattening and without opt and the g
 ## Sequential logic optimisations
 
 
+**Video-1**:
+
+The files dff_const1.v and dff_const2.v are used. Opening these files in gvim using ```dff_const1.v -o dff_const2.v``` will open both of them in a same window.
+
+![image](https://user-images.githubusercontent.com/14873110/166242557-3a1482b6-cb33-4b17-8e5e-a9b7bac70c3b.png)
+
+![image](https://user-images.githubusercontent.com/14873110/166243199-c0478b97-7232-48f9-b5fe-1cbc808b27e0.png)
+
+
+**Video-2**:
+
+![image](https://user-images.githubusercontent.com/14873110/166243857-4ee0f672-06fb-4798-9ba7-e6d5708b9804.png)
 
 
 
