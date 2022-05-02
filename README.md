@@ -913,7 +913,6 @@ endcase
              
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ## For loop and For generate
 
 Loop constructs are of two types: for loop (evaluating expressions) and generate for loop (instantiating hardware multiple times) <br />
@@ -929,7 +928,34 @@ One example where for generate comes in handy would be a ripple carry adder wher
 
 ## Labs on For loop and For generate
 
+Use ```gvim mux_generate.v``` to open the .v file.
 
+The following is the code snippet:
+
+```verilog
+for (k = 0; k < 4; k = k+1)
+  begin
+   if (k == sel)
+    y = i_int[k];
+  end
+```
+This generates a 4x1 mux. Just by changing the max value of k, we can scale up the design! <br />
+
+After simulation:
+
+![image](https://user-images.githubusercontent.com/14873110/166332336-bb98eee6-80f2-4b29-b87b-b51290ae32ca.png)
+
+**Note**: Download tools and explore other files too. There is still ripple carry adder to be done.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Thanks to vsd for an insightful workshop. I'll keep updating this repo as I explore more of sky130.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    
 
 
 
