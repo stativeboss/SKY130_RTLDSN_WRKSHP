@@ -689,6 +689,36 @@ The files dff_const1.v and dff_const2.v are used. Opening these files in gvim us
 
 ![image](https://user-images.githubusercontent.com/14873110/166243857-4ee0f672-06fb-4798-9ba7-e6d5708b9804.png)
 
+The below snippet is for dff_const3.v:
+
+![image](https://user-images.githubusercontent.com/14873110/166248716-91e6252c-a711-40ef-b043-6ae47367c980.png)
+
+**Video-3**:
+
+After synthesizing, this is what is found:
+
+![image](https://user-images.githubusercontent.com/14873110/166249212-ef03dfcc-5a7d-49b0-851e-abdbd6267a9c.png)
+
+The below snippet shows dff_const4.v and dff_const5.v opened in gvim:
+
+![image](https://user-images.githubusercontent.com/14873110/166253465-d568d30f-c644-4196-a071-20a63a500e5e.png)
+
+The below snippet shows the synthesized dff_const4.v and dff_const5.v:
+
+![image](https://user-images.githubusercontent.com/14873110/166255003-a083c294-6a4f-451f-8180-c95c91f30d90.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
