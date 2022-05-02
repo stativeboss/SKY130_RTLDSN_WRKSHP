@@ -756,6 +756,7 @@ This is a simulation synthesis mismatch. (Doubt: Simulation without optimisation
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Labs on Sythesis and Simulation mismatch
 
 
 
