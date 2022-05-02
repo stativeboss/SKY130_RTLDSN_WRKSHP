@@ -25,7 +25,7 @@ This repo aims to make a record of the labs performed while briefing on what is 
 - [Combinational logic optimisations](#combinational-logic-optimisations)
 - [Sequential logic optimisations](#sequential-logic-optimisations)
 - [Sequential optimisations for unused outputs](#sequential-optimisations-for-unused-outputs)
-- [GLS, Synthesis-Simulation mismatch, Blocking and Non-blocking statements](#gls-synthesis-simulation-mismatch-blocking-non-blocking-statements)
+- [GLS, Synthesis-Simulation mismatch, Blocking and Non-blocking statements](#gls-synthesis-simulation-mismatch-blocking-and-non-blocking-statements)
 - [Labs on Sythesis and Simulation mismatch](#labs-on-synthesis-and-simulation-mismatch)
 - [Labs on Synthesis and Simulation mismatch for blocking statements](#labs-on-synthesis-and-simulation-mismatch-forblocking-statements)
 - [If case constructs](#if-case-constructs)
@@ -729,7 +729,7 @@ This is called _SEQUENTIAL OPTIMISATION FOR UNUSED OUTPUTS_
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 
+## GLS, Synthesis Simulation Mismatch, Blocking and Non Blocking Statements
 
 
 
