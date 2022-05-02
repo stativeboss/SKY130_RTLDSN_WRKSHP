@@ -592,7 +592,21 @@ Checkout https://antmicro-skywater-pdk-docs.readthedocs.io/en/test-submodules-in
 
 This is called _Boolean Logic Optimisation_.
 
-**Video-2**
+**Video-2**:
+
+Sequential logic optimisation techniques could be braodly classified as basic techniques (constant propagation) and advanced techniques. The following are the advanced techniques: <br />
+- State optimisation
+- Retiming
+- Sequential Logic Cloning (Floor Plan Aware synthesis)
+
+![image](https://user-images.githubusercontent.com/14873110/166172200-bf751f21-69ce-4cb3-bd8c-521011dada88.png)
+
+**Note**: If the same set-up as above were to be done for a FF with Set input instead of Reset, we'd be tempted to say that the output follows Set signal. But upon timing diagram, we'd realise that the Set can make the output high asynchronously, but can't make it low!
+
+
+**Video-3**:
+
+
 
 
  
