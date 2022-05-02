@@ -645,9 +645,34 @@ Upon synthesis, we see that the tool actually uses AND gate and OR gate instead 
 
 ![image](https://user-images.githubusercontent.com/14873110/166221263-0ca2796c-eaba-4a7a-ab08-b21a20522a12.png)
 
-**Note**: The instructor uses a command ```opt_clean -purge``` before implementing the abc in order to implement all the optimisations. Intrestingly, I haven't used that command and still got an optimised output! This is happening probably because yosys automatically does some basic optimisation even if we don't ask it to.
+**Note**: The instructor uses a command ```opt_clean -purge``` before implementing the abc, to make all the optimisations. Intrestingly, I haven't used that command and still got an optimised output! This is happening probably because yosys automatically does some basic optimisation even if we don't ask it to.
 
 **Video-2**:
+
+Testing the optimisation for opt_check3.v, opt_check4.v, and multiple_module_opt.v. Note that the designs having multiple modules should be flattened before optimisation (but why?).
+
+Refer below snippets:
+
+opt_check3.v below:
+
+![image](https://user-images.githubusercontent.com/14873110/166225704-a2eef1d7-919d-4031-a1c6-b1a9974a0b9d.png)
+
+opt_check4.v below:
+
+![image](https://user-images.githubusercontent.com/14873110/166227072-618689fa-870c-4bad-9a96-9626a7a7cf7d.png)
+
+multiple_module_opt.v below (flattened the hierarchy):
+
+![image](https://user-images.githubusercontent.com/14873110/166230902-a5af13e2-05f6-4283-b1ef-f5a1953a6c98.png)
+
+**Note**: Synthesizing the above design, without flattening it resulted in the same graphviz too. So, why exactly should we flatten before optimizing?
+
+Implemented the multiple_module_opt without flattening and without opt and the graphviz file is as below:
+
+![image](https://user-images.githubusercontent.com/14873110/166231864-cdb5e3d8-863f-465d-a554-f655aa4646e1.png)
+
+
+
 
 
 
