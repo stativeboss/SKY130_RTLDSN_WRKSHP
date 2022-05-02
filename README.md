@@ -731,6 +731,17 @@ This is called _SEQUENTIAL OPTIMISATION FOR UNUSED OUTPUTS_
 
 ## GLS, Synthesis Simulation Mismatch, Blocking and Non Blocking Statements
 
+_Question_: What is GLS?
+_Answer_: Originally we ran simualtions with RTL code as unit under test. Now we'll run the simulation with netlist as unit under test. This is called Gate Level Synthesis (or GLS in short).
+
+_Question_: Why GLS?
+_Answer_: We wish to verify whether the logic holds even after synthesis (reason why it might be different is answered next). Also, GLS considers the timing as we run it with _Delay annotation_ (https://www.linkedin.com/pulse/gate-level-simulation-comprehensive-overview-jerry-mcgoveran/).
+
+_Question_: Why does Synthesis-Simulation Mismatch happen?
+_Answer_: Mostly three reasons:
+          - Missing sensitivity list: For a mux, let's say we ask the ouput to respond only for change in select (but not input change) 
+          - Blocking/Non-blocking mishap: 
+          - Non-Standard Verilog coding: 
 
 
 
