@@ -809,6 +809,13 @@ Case statement
 Note that if-else is executed on a priority manner. Meaning that if I have an if else statement, when the if condition is satisfied, the code comes out to end. This is not the same in 'case'. All the cases are checked one-by-one and whichever case satisfies is executed. That is why we should not have an overlapping case statement.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Labs on Incomplete If case
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Labs on Incomplete Overlapping If case
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## For loop and For generate
 
@@ -820,6 +827,10 @@ For loops are used in 'always' block, while the Generate for loops are used outs
 - We can also use if-generate block, but for-generate and if-generate should be used only outside the always block.
 
 One example where for generate comes in handy would be a ripple carry adder where a full adder needs to be instantiated multiple times.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Labs on For loop and For generate
 
 
 
