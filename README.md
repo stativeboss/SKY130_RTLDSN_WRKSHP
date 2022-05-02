@@ -846,6 +846,21 @@ Upon synthesis:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Labs on Incomplete Overlapping If case
 
+Use ```gvim comp_case.v -o incomp_case.v -o partial_case_assign.v -o bad_case.v``` to open these files's script in gvim.
+
+The following are the observations for incomp_case.v:
+
+![image](https://user-images.githubusercontent.com/14873110/166326146-936d2f40-bd86-4fe7-99af-43df14c73627.png)
+
+Upon simulation:
+
+![image](https://user-images.githubusercontent.com/14873110/166326244-1bc804d2-ffb9-491a-8355-c33cacac9a2b.png)
+
+Upon synthesis:
+
+![image](https://user-images.githubusercontent.com/14873110/166326466-7bc03faa-3760-46a2-9d03-1d3fc33db896.png)
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
