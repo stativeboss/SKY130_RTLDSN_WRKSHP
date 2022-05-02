@@ -775,6 +775,20 @@ Use the following commands:
 ```
 ![image](https://user-images.githubusercontent.com/14873110/166299013-810e709c-c06f-48ec-af02-f63c6fcec87b.png)
 
+Blocking caveat implemented before GLS is shown below:
+
+![image](https://user-images.githubusercontent.com/14873110/166299730-c9119f1c-f73f-4493-9271-489510f882e2.png)
+
+The GLS is shown below:
+
+![image](https://user-images.githubusercontent.com/14873110/166300291-31f72be6-c007-43de-a9cf-e99368238b4e.png)
+
+Cross verifying with RTL gtkwave, we observe that the waveforms won't match.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 
+
 
 
 
