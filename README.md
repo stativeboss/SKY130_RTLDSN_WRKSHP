@@ -645,7 +645,11 @@ Upon synthesis, we see that the tool actually uses AND gate and OR gate instead 
 
 ![image](https://user-images.githubusercontent.com/14873110/166221263-0ca2796c-eaba-4a7a-ab08-b21a20522a12.png)
 
-**Note**: The instructor uses a command ```opt_clean -purge`` before implementing the abc in order to implement all the optimisations. Intrestingly, I haven't used that command and still got an optimised output! This is happening probably because yosys automatically does some basic optimisation even if we don't ask it to.
+**Note**: The instructor uses a command ```opt_clean -purge``` before implementing the abc in order to implement all the optimisations. Intrestingly, I haven't used that command and still got an optimised output! This is happening probably because yosys automatically does some basic optimisation even if we don't ask it to.
+
+**Video-2**:
+
+
 
 
 
