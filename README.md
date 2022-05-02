@@ -1,7 +1,7 @@
 # SKY130_RTLDSN_WRKSHP
 ![image](https://user-images.githubusercontent.com/14873110/165369130-3d7d0459-3793-4838-ba00-81f3ecd547ba.png)
 ## Course Overview :
-A good RTL design engineer is expected to understand which code (or code style) is synthesizeable and which is not. This five-day workshop by VSD (https://www.vlsisystemdesign.com/) gives an insight into this aspect through theory and labs. It briefly explains the following steps of chip design:
+This five-day workshop by VSD (https://www.vlsisystemdesign.com/) gives an insight into this aspect through theory and labs. It briefly explains the following steps of chip design:
 1. Digital design. 
 2. Validate the design through functional simualations and writing testbenches. 
 3. Logical synthesis of the validated design.
@@ -618,6 +618,10 @@ But how is this an _optimisation_?
 ![image](https://user-images.githubusercontent.com/14873110/166174598-076f5d2b-b510-41b8-9a8e-ac7fe5362c97.png)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Combinational Logic Optimisations
+
+
 
 
 
