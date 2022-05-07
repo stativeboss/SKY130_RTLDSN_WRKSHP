@@ -1,5 +1,4 @@
 # SKY130_RTLDSN_WRKSHP
-![image](https://user-images.githubusercontent.com/14873110/165369130-3d7d0459-3793-4838-ba00-81f3ecd547ba.png)
 ## Course Overview :
 This five-day workshop by VSD (https://www.vlsisystemdesign.com/) gives an insight into RTL design and synthesis through theory and labs. It briefly explains the following steps of chip design:
 1. Digital design. 
